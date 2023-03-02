@@ -38,7 +38,7 @@ pipeline{
             groupId: 'TrainBook',
             nexusUrl: '44.202.23.92:8081',
             nexusVersion: 'nexus2',
-            protocol: 'https',
+            protocol: 'http',
             repository: 'Train-Ticket',
             version: "${readPomVersion.version}"
           
