@@ -44,13 +44,13 @@ pipeline{
     //  }
   //  }
   //  }
-    // stage('Docker Image') {
-     //        steps {
-     //           script {
-      //            sh 'docker build -t kajendran1451/my-app-1.0 .'
-       //         }
-       //     }
-   //  }
+     stage('Docker Image') {
+             steps {
+                script {
+                  sh 'docker build -t kajendran1451/TrainBook-0.0.1-SNAPSHOT .'
+                }
+            }
+     }
    // stage('Docker deployment')
    // {
    // steps{
