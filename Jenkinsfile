@@ -47,14 +47,14 @@ pipeline{
      stage('Docker Image') {
              steps {
                 script {
-                  sh 'docker build -t Train/TrainBook-0.0.1-SNAPSHOT .'
+                  sh 'docker build -t Test/TrainBook-0.0.1 .'
                 }
             }
      }
    // stage('Docker deployment')
    // {
    // steps{
-  // sh 'docker run -d -p 8025:8080 --name kaj1 kajendran1451/my-app-1.0 ' 
+  // sh 'docker run -d -p 8025:8080 --name kaj1 kajendran1451/TrainBook-0.0.1 ' 
   //  }
    // }
 }
