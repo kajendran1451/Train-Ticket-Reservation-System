@@ -25,19 +25,22 @@ pipeline{
           nexusArtifactUploader artifacts: 
             [
               [
-                artifactId: 'my-app',
-                classifier: '', file: 'target/my-app-1.0-SNAPSHOT.jar',
-                type: 'jar']
+                artifactId: 'TrainBook', 
+                classifier: '',
+                file: 'target/TrainBook-0.0.1-SNAPSHOT.war',
+                type: 'war'
+              ]
             ],
             credentialsId: 'nexus',
-            groupId: 'junit',
-            nexusUrl: 'http://34.226.154.77:8081',
+            groupId: 'TrainBook',
+            nexusUrl: '44.202.23.92:8081',
             nexusVersion: 'nexus2',
             protocol: 'http',
-            repository: 'demo1', 
-            version: '4.11'
-        }
+            repository: 'Train-Ticket',
+            version: '0.0.1-SNAPSHOT'
+          
       }
+    }
     }
     // stage('Docker Image') {
      //        steps {
