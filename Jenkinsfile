@@ -17,34 +17,33 @@ pipeline{
         }
       }
     }
-    stage ("upload war file to nexus")
-    {
-      steps
-      {
-        script{
+//    stage ("upload war file to nexus")
+  //  {
+    //  steps
+    //  {
+      //  script{
           
-          def readPomversion = readMavenPom file: 'pom.xml'
+        //  def readPomversion = readMavenPom file: 'pom.xml'
             
-          nexusArtifactUploader artifacts: 
-            [
-              [
-                artifactId: 'Train-Ticket', 
-                classifier: '',
-                file: 'target/TrainBook-0.0.1-SNAPSHOT.war',
-                type: 'war'
-              ]
-            ],
-            credentialsId: 'nexus',
-            groupId: 'TrainBook',
-            nexusUrl: '44.202.23.92:8081',
-            nexusVersion: 'nexus2',
-            protocol: 'http',
-            repository: 'Train-Ticket',
-            version: "${readPomVersion.version}"
-          
-      }
-    }
-    }
+        //  nexusArtifactUploader artifacts: 
+          //  [
+            //  [
+              //  artifactId: 'Train-Ticket', 
+              //  classifier: '',
+              //  file: 'target/TrainBook-0.0.1-SNAPSHOT.war',
+             //   type: 'war'
+            //  ]
+           // ],
+          //  credentialsId: 'nexus',
+          //  groupId: 'TrainBook',
+          //  nexusUrl: '44.202.23.92:8081',
+          //  nexusVersion: 'nexus2',
+           // protocol: 'http',
+          //  repository: 'Train-Ticket',
+          //  version: "${readPomVersion.version}"
+    //  }
+  //  }
+  //  }
     // stage('Docker Image') {
      //        steps {
      //           script {
