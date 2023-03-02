@@ -25,7 +25,7 @@ pipeline{
           nexusArtifactUploader artifacts: 
             [
               [
-                artifactId: 'TrainBook', 
+                artifactId: 'Train-Ticket', 
                 classifier: '',
                 file: 'target/TrainBook-0.0.1-SNAPSHOT.war',
                 type: 'war'
