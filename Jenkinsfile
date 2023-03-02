@@ -6,17 +6,17 @@ pipeline{
             sh 'mvn clean install'
           }
        }
-  //  stage ("static code analis")
-  //  {
-   //   steps
-    //  {
-    //    script{
-     //   withSonarQubeEnv(credentialsId: 'sonar') {
-  // sh 'mvn clean package sonar:sonar'
-    //    }
-      //  }
-    //  }
- //   }
+    stage ("static code analis")
+    {
+      steps
+      {
+        script{
+       withSonarQubeEnv(credentialsId: 'sonar') {
+   sh 'mvn clean package sonar:sonar'
+        }
+        }
+      }
+    }
     stage ("upload war file to nexus")
     {
       steps
