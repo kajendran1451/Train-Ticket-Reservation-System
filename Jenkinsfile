@@ -47,7 +47,7 @@ pipeline{
      stage('Docker Image') {
              steps {
                 script {
-                  sh 'docker build -t kajendran1451/TrainBook-0.0.1-SNAPSHOT .'
+                  sh 'docker build -t Train/TrainBook-0.0.1-SNAPSHOT .'
                 }
             }
      }
