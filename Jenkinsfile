@@ -51,11 +51,11 @@ pipeline{
                 }
             }
      }
-   // stage('Docker deployment')
-   // {
-   // steps{
-  // sh 'docker run -d -p 8025:8080 --name kaj1 kajendran1451/TrainBook-0.0.1 ' 
-  //  }
-   // }
+    stage('Docker deployment')
+    {
+    steps{
+  sh 'docker run -d -p 8014:8080 --name test test/trainbook-0.0.1 ' 
+    }
+    }
 }
 }
